@@ -2,19 +2,23 @@ package hacktahon.config.model;
 
 import java.io.Serializable;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
-public class Agente implements Serializable{
+public class Agente implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private Ponto ponto;
 	
+	@OneToOne(cascade=CascadeType.ALL)
+	private Ponto ponto;
+
 	public Agente(Ponto p) {
 		this.ponto = p;
 	}

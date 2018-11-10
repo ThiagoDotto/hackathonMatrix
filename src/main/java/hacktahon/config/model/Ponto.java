@@ -16,10 +16,13 @@ public class Ponto implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	private String coordX;
-	private String coordY;
-	private boolean status;
-	private boolean seguro;
+	private Double coordX;
+	private Double coordY;
+
+	public Ponto(Double x, Double y) {
+		this.coordX = x;
+		this.coordY = y;
+	}
 
 	public Long getId() {
 		return id;
@@ -29,36 +32,20 @@ public class Ponto implements Serializable {
 		this.id = id;
 	}
 
-	public String getCoordX() {
+	public Double getCoordX() {
 		return coordX;
 	}
 
-	public void setCoordX(String coordX) {
+	public void setCoordX(Double coordX) {
 		this.coordX = coordX;
 	}
 
-	public String getCoordY() {
+	public Double getCoordY() {
 		return coordY;
 	}
 
-	public void setCoordY(String coordY) {
+	public void setCoordY(Double coordY) {
 		this.coordY = coordY;
-	}
-
-	public boolean isStatus() {
-		return status;
-	}
-
-	public void setStatus(boolean status) {
-		this.status = status;
-	}
-
-	public boolean isSeguro() {
-		return seguro;
-	}
-
-	public void setSeguro(boolean seguro) {
-		this.seguro = seguro;
 	}
 
 }

@@ -14,7 +14,7 @@ public class AgenteController {
 	@Autowired
 	private AgenteRepository agentes;
 	
-	@GetMapping("/map")
+	@GetMapping("/")
 	public String enemySpawn() {
 		
 		Ponto ponto = new Ponto();

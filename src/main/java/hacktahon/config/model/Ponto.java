@@ -19,6 +19,9 @@ public class Ponto implements Serializable {
 	private Double coordX;
 	private Double coordY;
 
+	public Ponto() {
+	}
+	
 	public Ponto(Double x, Double y) {
 		this.coordX = x;
 		this.coordY = y;

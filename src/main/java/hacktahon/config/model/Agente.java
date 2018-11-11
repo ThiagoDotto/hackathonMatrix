@@ -19,6 +19,10 @@ public class Agente implements Serializable {
 	@OneToOne(cascade=CascadeType.ALL)
 	private Ponto ponto;
 
+	public Agente() {
+		// TODO Auto-generated constructor stub
+	}
+	
 	public Agente(Ponto p) {
 		this.ponto = p;
 	}

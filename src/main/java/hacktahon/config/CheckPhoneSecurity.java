@@ -1,8 +1,6 @@
 package hacktahon.config;
 
 public class CheckPhoneSecurity {
-	private double lat;
-	private double lng;
 	private double RANGE = 1000;
 	private final double SECONDVALUE = 30.87;
 	
@@ -25,10 +23,10 @@ public class CheckPhoneSecurity {
 		rangeInDegrees = rangeInDegrees / 60;
 		rangeInDegrees = rangeInDegrees / 60;
 		
-		bigLat = lat + rangeInDegrees;
-		smallLat = lat - rangeInDegrees;
-		bigLng = lng + rangeInDegrees;
-		smallLng = lng - rangeInDegrees;
+		bigLat = phoneLat + rangeInDegrees;
+		smallLat = phoneLat - rangeInDegrees;
+		bigLng = phoneLng + rangeInDegrees;
+		smallLng = phoneLng - rangeInDegrees;
 		
 		if(bigLat > 90)
 			bigLat = 90;
